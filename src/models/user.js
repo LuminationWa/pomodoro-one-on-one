@@ -6,7 +6,7 @@ const userSchema = new Schema(
     password: String,
     status: Boolean,
     totalTime: Number,
-    studyPartner: mongoose.Schema.Types.ObjectId, 
+    studyPartner: { type: Schema.Types.ObjectId, ref: 'User' }, //Could replace with groups instead 
   },
   {
     timestamps: true,
